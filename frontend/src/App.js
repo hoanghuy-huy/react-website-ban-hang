@@ -1,9 +1,19 @@
 import React from 'react'
-import { Counter } from './components/Counter'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ProductPage from './pages/ProductPage'
+
 
 const App = () => {
   return (
-    <Counter/>
+    <div>
+        <Router>
+            <Routes>
+                <Route path='/' element={<HomePage /> }></Route>
+                <Route path='/product' element={<ProductPage /> }></Route>
+            </Routes>
+        </Router>
+    </div>
   )
 }
 
